@@ -1,0 +1,41 @@
+plugins {
+    id 'maven-publish'
+    id 'java-gradle-plugin'
+}
+
+group 'dev.barroit'
+version '1.0-SNAPSHOT'
+
+gradlePlugin {
+    plugins {
+        SpecialSource {
+            id = 'dev.barroit.specialsource'
+            implementationClass = 'dev.barroit.specialsource.SpecialSource'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
+
+artifacts { ->
+    archives tasks.withType(Jar) { ->
+        from compileJava.outputs
+        manifest { ->
+            attributes(
+                    "Manifest-Version": 1.0,
+                    "Main-Class": 'dev.barroit.specialsource.SpecialSource'
+            )
+        }
+    }
+}

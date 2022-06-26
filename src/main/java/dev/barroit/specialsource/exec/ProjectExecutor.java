@@ -5,7 +5,7 @@ import org.gradle.api.Project;
 import org.gradle.process.ExecResult;
 import org.gradle.process.ExecSpec;
 
-public class ProjectExecutor implements BaseExec {
+public class ProjectExecutor implements BaseExecutor {
     private final Project project;
 
     public ProjectExecutor(Project project) {

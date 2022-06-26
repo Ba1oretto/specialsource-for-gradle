@@ -1,30 +1,26 @@
 package dev.barroit.specialsource.util;
 
+import dev.barroit.specialsource.exception.SpecialSourceDataException;
+import lombok.experimental.UtilityClass;
+import org.gradle.api.provider.Property;
+
 import java.io.File;
-import java.net.URI;
 
+@UtilityClass
 public class TaskUtil {
-    private TaskUtil() {
-        throw new UnsupportedOperationException("This class cannot be instance.");
+    public void check(boolean expected, boolean actual, String failureMessage) {
+        if (expected != actual) throw new SpecialSourceDataException(failureMessage);
     }
 
-    public static File getFile(URI uri) {
-        return new File(uri);
+    public String getPath(String mavenLocalPath, String jarPath) {
+        return new File(mavenLocalPath, jarPath).getPath();
     }
 
-    public static File getFile(String path) {
-        return new File(path);
+    public String fillVersion(String temp, String minecraftVersion) {
+        return String.format(temp, minecraftVersion, minecraftVersion);
     }
 
-    public static File getFile(File parent, String child) {
-        return new File(parent, child);
-    }
-
-    public static String setVersion(String temp, String version) {
-        return String.format(temp, version, version);
-    }
-
-    public static boolean illegalVersion(String version) {
-        return null == version || version.isBlank();
+    public boolean isPresent(Property<?> target) {
+        return target.isPresent();
     }
 }

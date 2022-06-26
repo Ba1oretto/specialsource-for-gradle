@@ -6,13 +6,15 @@ plugins {
 }
 
 group 'dev.barroit'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 gradlePlugin {
     plugins {
         SpecialSource {
             id = 'dev.barroit.specialsource'
             implementationClass = 'dev.barroit.specialsource.SpecialSource'
+            displayName = 'Special Source'
+            description = 'Special source for gradle'
         }
     }
 }

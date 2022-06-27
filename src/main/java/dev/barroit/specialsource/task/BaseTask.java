@@ -78,8 +78,6 @@ public abstract class BaseTask extends DefaultTask {
         this.inputPath = input.getPath();
 
         this.obfuscatedPath = isPresent(getOutput()) && !getOutput().get().isDirectory() ? getOutput().get().getPath() : inputPath.replace(".jar", "-obf.jar");
-        System.out.println(inputPath);
-        System.out.println(obfuscatedPath);
     }
 
     private void initMojangObfuscatedToSpigotObfuscatedData() {
@@ -97,7 +95,6 @@ public abstract class BaseTask extends DefaultTask {
     private String getVersion() {
         check(true, isPresent(getMinecraftVersion()), "property 'minecraftVersion' not present.");
         String minecraftVersion = getMinecraftVersion().get();
-        System.out.println(minecraftVersion + ": " + minecraftVersion.isBlank());
         check(false, minecraftVersion.isBlank(), "property 'minecraftVersion' is blank.");
         check(true, MinecraftVersion.contains(minecraftVersion), "property 'minecraftVersion' incorrect.");
         return minecraftVersion;

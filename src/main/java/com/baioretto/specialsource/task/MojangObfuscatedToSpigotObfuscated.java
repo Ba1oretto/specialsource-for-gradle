@@ -1,4 +1,4 @@
-package dev.barroit.specialsource.task;
+package com.baioretto.specialsource.task;
 
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.process.ExecSpec;

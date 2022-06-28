@@ -5,8 +5,8 @@ plugins {
     id "io.freefair.lombok" version "6.5.0.2"
 }
 
-group 'dev.barroit'
-version '1.1.0'
+group 'com.baioretto'
+version '1.2.0'
 
 repositories {
     mavenCentral()
@@ -24,9 +24,9 @@ test {
 gradlePlugin {
     plugins {
         SpecialSource {
-            id = 'dev.barroit.specialsource'
-            implementationClass = 'dev.barroit.specialsource.SpecialSource'
-            displayName = 'Special Source'
+            id = 'com.baioretto.specialsource'
+            implementationClass = 'com.baioretto.specialsource.SpecialSource'
+            displayName = 'SpecialSource'
             description = 'Special source for gradle'
         }
     }
@@ -35,5 +35,5 @@ gradlePlugin {
 pluginBundle {
     website = 'https://github.com/Ba1oretto/specialsource-for-gradle'
     vcsUrl = 'https://github.com/Ba1oretto/specialsource-for-gradle'
-    tags = ['minecraft', 'barroit', 'java', 'source code remapping']
+    tags = ['minecraft', 'baioretto', 'java', 'source code compile']
 }

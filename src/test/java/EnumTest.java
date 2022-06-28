@@ -1,4 +1,4 @@
-import dev.barroit.specialsource.enumerate.MinecraftVersion;
+import com.baioretto.specialsource.enumerate.MinecraftVersion;
 
 import static org.junit.jupiter.api.Assertions.assertSame;
 import org.junit.jupiter.api.Test;

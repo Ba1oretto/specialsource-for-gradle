@@ -1,4 +1,4 @@
-package dev.barroit.specialsource.enumerate;
+package com.baioretto.specialsource.enumerate;
 
 import lombok.*;
 import lombok.experimental.Accessors;

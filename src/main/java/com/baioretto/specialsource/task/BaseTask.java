@@ -1,8 +1,8 @@
-package dev.barroit.specialsource.task;
+package com.baioretto.specialsource.task;
 
-import dev.barroit.specialsource.enumerate.MinecraftVersion;
-import dev.barroit.specialsource.exec.ProjectExecutor;
-import dev.barroit.specialsource.util.TaskUtil;
+import com.baioretto.specialsource.enumerate.MinecraftVersion;
+import com.baioretto.specialsource.exec.ProjectExecutor;
+import com.baioretto.specialsource.util.TaskUtil;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.experimental.Accessors;
@@ -15,7 +15,7 @@ import org.gradle.api.tasks.Optional;
 
 import java.io.File;
 
-import static dev.barroit.specialsource.util.TaskUtil.*;
+import static com.baioretto.specialsource.util.TaskUtil.*;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Accessors(fluent = true)
@@ -37,11 +37,11 @@ public abstract class BaseTask extends DefaultTask {
     @Optional
     public abstract Property<File> getInput();
 
-    @Input
+    @InputFile
     @Optional
     public abstract Property<File> getObfuscated();
 
-    @Input
+    @InputFile
     @Optional
     public abstract Property<File> getOutput();
 

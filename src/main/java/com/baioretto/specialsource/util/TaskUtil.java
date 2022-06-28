@@ -1,6 +1,6 @@
-package dev.barroit.specialsource.util;
+package com.baioretto.specialsource.util;
 
-import dev.barroit.specialsource.exception.SpecialSourceDataException;
+import com.baioretto.specialsource.exception.SpecialSourceDataException;
 import lombok.experimental.UtilityClass;
 import org.gradle.api.provider.Property;
 

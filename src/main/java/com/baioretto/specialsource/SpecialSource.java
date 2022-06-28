@@ -1,8 +1,8 @@
-package dev.barroit.specialsource;
+package com.baioretto.specialsource;
 
-import dev.barroit.specialsource.exception.SpecialSourceInternalException;
-import dev.barroit.specialsource.task.MojangMappingToMojangObfuscated;
-import dev.barroit.specialsource.task.MojangObfuscatedToSpigotObfuscated;
+import com.baioretto.specialsource.exception.SpecialSourceInternalException;
+import com.baioretto.specialsource.task.MojangMappingToMojangObfuscated;
+import com.baioretto.specialsource.task.MojangObfuscatedToSpigotObfuscated;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 
@@ -12,8 +12,6 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
-
-import static dev.barroit.specialsource.util.TaskUtil.*;
 
 @SuppressWarnings({"unused", "NullableProblems"})
 public class SpecialSource implements Plugin<Project> {

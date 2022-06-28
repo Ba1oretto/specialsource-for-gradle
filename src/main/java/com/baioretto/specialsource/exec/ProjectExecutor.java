@@ -1,4 +1,4 @@
-package dev.barroit.specialsource.exec;
+package com.baioretto.specialsource.exec;
 
 import org.gradle.api.Action;
 import org.gradle.api.Project;

@@ -1,4 +1,4 @@
-package dev.barroit.specialsource.exception;
+package com.baioretto.specialsource.exception;
 
 @SuppressWarnings("unused")
 public class SpecialSourceDataException extends RuntimeException {

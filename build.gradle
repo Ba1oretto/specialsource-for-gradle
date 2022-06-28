@@ -33,7 +33,7 @@ gradlePlugin {
 }
 
 pluginBundle {
-    website = 'https://github.com/Ba1oretto/specialsource-for-gradle'
-    vcsUrl = 'https://github.com/Ba1oretto/specialsource-for-gradle'
+    website = 'https://specialsource.baioretto.com'
+    vcsUrl = 'https://github.com/Ba1oretto/specialsource-gradle-plugin'
     tags = ['minecraft', 'baioretto', 'java', 'source code compile']
 }

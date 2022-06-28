@@ -39,10 +39,6 @@ public abstract class BaseTask extends DefaultTask {
 
     @InputFile
     @Optional
-    public abstract Property<File> getObfuscated();
-
-    @InputFile
-    @Optional
     public abstract Property<File> getOutput();
 
     @Getter
